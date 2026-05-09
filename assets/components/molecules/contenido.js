@@ -7,6 +7,8 @@ import { Input } from '../atoms/input.js';
 import { Columnas } from './columnas.js';
 import { Tabla } from '../atoms/tabla.js';
 import { Formulario } from './formulario.js';
+import { Modal } from '../atoms/modal.js';
+import { Boton } from '../atoms/boton.js';
 
 
 const componentes = {
@@ -18,6 +20,8 @@ const componentes = {
     columnas: (item) => Columnas(item.columnas),
     tabla: (item) => Tabla(item.headers, item.filas),
     formulario: (item) => Formulario(item.contenido, item.boton),
+    boton: (item) => Boton(item),
+    modal: (item) => Modal(item),
 };
 
 export const BloqueContenido = (elementos) => {
